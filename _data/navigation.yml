@@ -1,0 +1,40 @@
+# main links links
+main:
+  - title: "Home"
+    url: \#Biography
+
+  - title: "News"
+    url: \#News    
+
+  - title: "Publications"
+    url: \#Publications  
+    # url: /publications/
+
+  - title: "Talks"
+    url: \#Talks   
+    # url: /talks/
+
+  - title: "Patent"
+    url: \#Patent  
+
+  - title: "Honour"
+    url: \#Honour   
+
+  - title: "Service"
+    url: \#Services   
+
+  - title: "Contact"
+    url: \#Contact  
+
+  
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+    
+  # - title: "CV"
+  #   url: \#cv
+  #   # url: /cv/
+    
+  # - title: "Guide"
+  #   url: /markdown/
+
+  
