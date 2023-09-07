@@ -25,6 +25,7 @@ permalink = ""
 title = ""
 
 
+
 for file in g:
     with open(file, 'r') as f:
         lines = f.read()
