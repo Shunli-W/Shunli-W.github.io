@@ -66,14 +66,14 @@ for row, item in publications.iterrows():
     
     md_filename = str(item.title).replace(":", " ") + ".md"
     # html_filename = str(item.pub_date) + "-" + item.url_slug
-    html_filename = str(item.title).replace(":", " ")  # paper_name
+    html_filename ="(" + str(item.year) + ") " + str(item.title).replace(":", " ")  # paper_name
     # year = item.pub_date[:4]
     
     ## YAML variables
     
     md = "---\ntitle: "   
     md += item.title.replace(":", " ") + '\n'
-    
+    md += "year: " + str(item.year)  + '\n'
     md += """collection: publications"""
     
     # md += """\npermalink: /publication/""" + html_filename
