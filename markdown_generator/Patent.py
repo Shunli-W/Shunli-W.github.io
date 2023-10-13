@@ -69,15 +69,15 @@ for row, item in talks.iterrows():
     md_filename = str(item.title).split("Patent No.:")[-1].strip() + ".md"
     html_filename = str(item.title).split("Patent No.:")[-1]
     
-    md = "---\ntitle: \""   + str(item.title).split("Patent No.:")[0].strip() + '"\n'
+    md = "---\ntitle: \""   + str(item.title).split(" (")[0].strip() + '"\n'
     md += "collection: patent" + "\n"        # # 修改
-    md += "permalink: /patent/" + html_filename + "\n"  # 修改
-    md += "no_: " + str(item.title).split("Patent No.:")[-1].strip() + "\n"  # 参数名字，必须避免保留字段，no是保留字段
+    md += "permalink: /patent/" + html_filename.split(" (")[0] + "\n"  # 修改
+    md += "no_: " + str(item.title).split("(")[-1].strip() + "\n"  # 参数名字，必须避免保留字段，no是保留字段
     md += "---\n"  # 必须保留
 
     md_filename = os.path.basename(md_filename)
     os.makedirs("../_patent/") if not os.path.exists("../_patent/") else 1
-    with open("../_patent/" + md_filename, 'w') as f:
+    with open("../_patent/" + md_filename.split(" (")[0] + ".md", 'w') as f:
         f.write(md)
 
 

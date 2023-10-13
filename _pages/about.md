@@ -8,6 +8,13 @@ redirect_from:
   - /about.html
 ---
 
+<span id="News" class="section-subheading">News</span>
+
+**博士申请：**
+
+各位老师好，我叫王顺利，来自山东农业大学，目前就读于计算机科学与技术专业，研究方向为计算机科学与技术。将于2024年6月毕业，目前还没有找到合适的博士生导师，如果哪位老师您觉得我适合您的方向，并且对我感兴趣，可以通过wgshli@163.com邮箱来联系我。
+<!-- include News.html -->
+
 <span id="Biography" class="section-subheading">Biography</span>
 <!-- ====== -->
 
@@ -32,6 +39,13 @@ Shunli Wang is a graduate student in the College of Information Science and Engi
   {% endfor %}
   </ul>
 
+  
+<span id="Patent" class="section-subheading">Patent and soft</span>
+  <ul>
+  {% for post in site.patent reversed %}
+    {% include archive-single-patent.html %}
+  {% endfor %}
+  </ul>
 
 <span id="Honour" class="section-subheading">Honour</span>
   <ul>
@@ -45,18 +59,11 @@ Shunli Wang is a graduate student in the College of Information Science and Engi
 <span id="Contact" class="section-subheading"></span>
   {% include Contact.html %}
 
-  
-<span id="Patent" class="section-subheading">Patent</span>
-  <ul>
-  {% for post in site.patent reversed %}
-    {% include archive-single-patent.html %}
-  {% endfor %}
-  </ul>
 
-<span id="News" class="section-subheading">News</span>
-<!-- include News.html -->
+<!-- <span id="News" class="section-subheading">News</span>
+include News.html -->
 
-<span id="Services"></span>
+<!-- <span id="Services"></span> -->
   <!-- include service.html -->
 
 <!-- Talks
